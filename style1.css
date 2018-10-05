@@ -1,0 +1,437 @@
+/*
+CSS for Leibniz site
+*/
+
+/* Header code, shared by all pages */
+.header {
+	position: relative;
+	text-align: center;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	width: 100%; /* Full width image */
+}
+
+	/* name text */
+	.name {
+		position: absolute; 
+		top: 0;
+		right: 0;
+		/* Right aligning text over image */
+		width: 72%;
+		/* Vertically (top) aligning text over image */
+		height: 87%;
+		/* (Black) background with 0.0 opacity, i.e. transparent */
+		background: rgba(0, 0, 0, 0.0);		
+		/* Gray text */
+		color: gray;	
+		/* Tutorial on Google Fonts: gohttps://www.w3schools.com/howto/howto_google_fonts.asp and
+		font testing code window: https://www.w3schools.com/howto/tryit.asp?font=Miss%20Fajardose */
+		font-family: 'Miss Fajardose';
+		/* Tutorial on responsive text: https://www.w3schools.com/howto/howto_css_responsive_text.asp */
+		font-size: 6.8vw;
+		/* Tutorial on line-height: https://www.w3schools.com/cssref/pr_dim_line-height.asp */
+		line-height: 140%;	
+	}
+
+		/* to make lastname larger */
+		.name em {
+			font-size: 120%; 
+		}
+	/* end name text */
+
+
+	/* nav bar, Tutorial on placing nav bar on image: https://www.w3schools.com/howto/howto_css_navbar_image.asp 
+	and general navbar tutorial and css styling: https://www.w3schools.com/howto/howto_js_topnav.asp */
+	.navigation {
+		position: absolute; 
+		/* can't get bottomline to line up correctly with all images! */
+		bottom: 0.5%; 
+		/* Black background with 0.4 opacity */
+		background: rgba(0, 0, 0, 0.4); 
+		width: 100%; 
+		padding: 0; 
+		/* Tutorial on overflow: https://www.w3schools.com/cssref/pr_pos_overflow.asp */
+		overflow: hidden; 
+		/* Tutorial on choosing websafe fonts: https://websitesetup.org/web-safe-fonts-html-css/ */
+		font-family: 'Arial Black', sans-serif; 
+	}
+		/* nav buttons default */
+		.navigation a {
+			float: left;
+			color: #f2f2f2; /* light gray text */
+			text-align: center;
+			text-decoration: none; /* hyperlinks not underlined */
+			font-size: 1.5vw;
+			font-style: h1;
+			padding: 1.25% 2%; /* to adjust size of button and vertically align */
+		}
+
+		/* when hover cursor over a nav button */
+		.navigation a:hover {
+			background-color: #ddd; /* light grey and opaque */
+			color: black; /* black text */
+		}
+		/* nav button current page */
+		.navigation a.active {
+			background-color: rgba(0, 0, 0, 0.6); /* Black background with 0.6 opacity */
+			color: white; /* white text */
+		}
+	/* end nav bar */
+/* end header */
+
+
+
+/* start body, all pages */
+.mainpage {
+	position: relative;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	width: 100%;
+}
+
+	.title {
+		color: dimgray; /* dark grey text */
+		font-family: Georgia, Garamond, Times, serif;
+		font-size: 2.8vw;
+		padding: 0% 3%;
+	}
+
+	.bodycontent {
+		color: #0d0d0d; /* almost-black text */
+		font-family: Veranda, Arial, Helvetica, sans-serif;
+		font-size: 2.1vw;
+		line-height: 1.4;
+		padding: 0% 8%;
+	}
+
+	blockquote {
+		font-family: Bookman, Times, serif;
+		font-size: 2vw;
+		font-style: italic;
+	}
+/* end body */
+
+
+
+/* start footer, all pagegs */
+.footer {
+	position: relative;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	width: 100%;
+}
+
+	.footer img {
+		float: right;
+		width: 60%; /* controls size/height of footer when used with HTML style inline: style="width=100%" */
+	}
+/* end footer */
+
+
+
+/* Used throughout site: Tutorial on responsive youtube embeded video sizing: 
+http://coolestguidesontheplanet.com/videodrome/youtube/ */
+.video-container { 
+	position:relative;
+	padding-bottom:56.25%;
+	/* removed top padding from original coolestguides per stackflow tutorial: 
+	https://stackoverflow.com/questions/43954836/disabling-blackbars-on-youtube-embed-iframe */
+	height:0;
+	overflow:hidden;
+}
+
+	.video-container iframe, .video-container object, .video-container embed {
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+	}
+/* end responsive video sizing */
+
+
+
+/* INDEX page, highlighted paragraph titles */
+h3 {
+	color: #404040;
+	line-height: 1.4;
+	background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.3)); /* gradient white to black background with 0.3 opacity */
+}
+
+	h4 {
+		color: #404040;
+		line-height: 1.4;
+		background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.3), rgba(0,0,0,0));/* Black background with 0.5 opacity */
+	}
+/* end INDEX */
+
+
+
+/* WORK page, timeline tutorial: https://www.w3schools.com/howto/howto_css_timeline.asp */
+* { /* also see tutorial: https://www.w3schools.com/Css/css3_box-sizing.asp */
+	box-sizing: border-box;
+}
+
+	body { /* this is body for WORK only! All pages have bodycontent class applied (above) */
+		background-color: white; /* entire page background color */
+		font-family: Helvetica, sans-serif;
+		font-size: 1.5vw;
+		line-height: 1.2;
+	}
+
+	/* The actual timeline */
+	.timeline {
+		position: relative;
+		max-width: 100%;
+		max-width: 1200px; /* when width gets too large, containers start to overlap. 
+		Can adjust limit once copy (and relative vertical heights of containers) final. */
+		margin: 0 auto; /* centers by automatically determining equal left and right margins */
+	}
+
+
+	/* The actual timeline (the vertical ruler) */
+	.timeline::after {
+		content: '';
+		position: absolute;
+		width: 6px;
+		background-image: linear-gradient(white, grey, white);
+		/* used gradient to visually hide excess line on either end! */
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		margin-left: -3px;
+	}
+
+
+	/* Container around content */
+	.container {
+		padding: 10px 40px;
+		position: relative;
+		background-color: inherit; 
+		/* these are the boxes around containers, set to inherit so same as page background color */
+		width: 50%;
+		margin-top: -15%; 
+		/* used negative top margin to make list items slightly overlap each other when viewed side by side */
+	}
+
+	/* The circles on the timeline */
+	.container::after {
+		content: '';
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		right: -17px;
+		background-color: grey; /* dot color */
+		border: 4px solid white;
+		top: 15px;
+		border-radius: 50%;
+		z-index: 1;
+	}
+
+	/* overrides negative margin for first container */
+	.first {
+		left: 0;
+		margin-top: 0; 
+	}
+
+	/* Place the container to the left */
+	.left {
+		left: 0;
+	}
+
+	/* Place the container to the right */
+	.right {
+		left: 50%;
+	}
+
+	/* Add arrows to the first and left containers (pointing right) */
+	.first::before, .left::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 22px;
+		width: 0;
+		z-index: 1;
+		right: 30px;
+		border: medium solid grey;
+		border-width: 10px 0 10px 10px;
+		border-color: transparent transparent transparent grey;
+		/* I don't think it's possible to use gradient on the colors here? 
+		Attempted to fade into container better, FAILED! */
+	}
+
+	/* Add arrows to the right container (pointing left) */
+	.right::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 22px;
+		width: 0;
+		z-index: 1;
+		left: 30px;
+		border: medium solid grey;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent grey transparent transparent;
+	}
+
+	/* Fix the circle for containers on the right side */
+	.right::after {
+		left: -16px;
+	}
+
+	/* The actual content */
+	.content {
+		padding: 20px 30px;
+		background-image: linear-gradient(grey, white);
+		position: relative;
+		border-radius: 6px;
+	}
+
+	/* Timeline media queries - Responsive timeline on screens less than 600px wide */
+	@media screen and (max-width: 600px) {
+		/* Place the timelime to the left */
+		.timeline::after {
+			left: 31px;
+		}
+
+		/* Full-width containers */
+		.container {
+			width: 100%;
+			margin-top: 10%;
+			padding-left: 70px;
+			padding-right: 25px;
+		}
+
+		/* Make sure that all arrows are pointing leftwards */
+		.container::before {
+			left: 60px;
+			border: medium solid grey;
+			border-width: 10px 10px 10px 0;
+			border-color: transparent grey transparent transparent;
+		}
+
+		/* Make sure all circles are at the same spot */
+		.first::after, .left::after, .right::after {
+			left: 15px;
+		}
+
+		/* Make all right containers behave like the left ones */
+		.right {
+			left: 0%;
+		}
+	} /* Dont delete that bracket!!! will break FUN page! */
+/* end timeline and WORK page */
+
+
+
+/* FUN page, Tutorial on blog layout style:
+https://www.w3schools.com/howto/howto_css_blog_layout.asp */
+.blogbody {
+	font-family: Veranda, Arial, Helvetica, sans-serif;
+	font-size: 1.3vw;
+	padding: 20px;
+	background-image: linear-gradient(#f1f1f1, white);
+	/* used gradient to fade page into footer image visually */
+}
+
+	/* full width container at top of page */
+	.blogheader {/* Header/Blog Title */
+		background: white;
+	}
+	/* instead of title, used three column layout within Header containter: 
+	three column tutorial: https://www.w3schools.com/howto/howto_css_three_columns.asp */
+		.bloginnercolumn {
+			/* Create three equal columns that floats next to each other */
+			float: left;
+			width: 33.33%;
+			padding: 20px;
+		}
+
+		/* Clear floats after the columns */
+		.bloginnerrow:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	/* end Header container */
+
+	/* Create two unequal columns that floats next to each other */
+	.leftcolumn {   
+		float: left;
+		width: 75%;
+	}
+
+	.rightcolumn {
+		float: left;
+		width: 25%;
+		padding-left: 20px;
+	}
+
+	/* Add a card effect for articles */
+	.card {
+		background-color: white;
+		padding: 20px;
+		margin-top: 20px;
+	}
+
+	/* to center images that are set less than 100% */
+	.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+
+	/* Clear floats after the columns */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	/* BlogFooter */
+	/* currently not using, leaving for reference */
+	.blogfooter {
+		padding: 20px;
+		text-align: center;
+		background: #ddd;
+		margin-top: 20px;
+	}
+
+	/* Blog Responsive layout - when the screen is less than 800px wide, 
+	make the two columns stack on top of each other instead of next to each other */
+	@media screen and (max-width: 800px) {
+		.leftcolumn, .rightcolumn {   
+			width: 100%;
+			padding: 0;
+		}
+	}
+/* end blog and FUN page */
+
+
+
+/* LINKS page, unless hover, force to same style as rest of site */
+.links {
+	color: #004466; /* darkest blue for nested list titles (not links) */
+}
+	.links a {
+		color: #006699; /* darker blue text */
+		font-family: Veranda, Arial, Helvetica, sans-serif;
+		font-size: 2.1vw;
+		line-height: 1.4;
+		padding: 0% 8%;
+		text-decoration: none;
+	}
+
+	.links a:hover {
+		color: #0099e6; /* lighter blue text if hovering */
+	}
+/* end LINKS page */
+
+/* end Leibniz CSS */                                                                                                                                                                                      
+
+
+

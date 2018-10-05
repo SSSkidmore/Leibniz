@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Gottfried Wilhelm von Leibniz</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- per tutorial "Responsive Web Design - The Viewport" at 
+	https://www.w3schools.com/Css/css_rwd_viewport.asp -->
+
+	<link href='https://fonts.googleapis.com/css?family=Miss Fajardose' rel='stylesheet'>
+	<!-- Tutorial on Google Fonts: gohttps://www.w3schools.com/howto/howto_google_fonts.asp 
+	and font testing code window: https://www.w3schools.com/howto/tryit.asp?font=Miss%20Fajardose 
+	also see: https://fonts.google.com/ Google fonts are open source web fonts. 
+	NOTE: if internet connection down, name in header will not display correctly!-->
+	
+	<link href="style1.css" rel="stylesheet" type="text/css"/>
+</head>
+
+	<body>
+		<div class="header">
+			<img src="headerarithmeticum.jpg" alt="Gottfried Wilhelm von Leibniz" style="width:100%">
+			<!-- image source: https://commons.wikimedia.org/wiki/File:Rechenmaschine_von_Leibniz_(Nachbau)_03.jpg
+			adapted with https://www.tuxpi.com/photo-effects/fade-image-->
+			
+			<div class="name"><h1>Gottfried Wilhelm<br><em>von Leibniz</em></h1></div>
+			
+			<div class="navigation">
+			<!-- Tutorial on placing nav bar on image: https://www.w3schools.com/howto/howto_css_navbar_image.asp 
+			and general navbar tutorial and css styling: https://www.w3schools.com/howto/howto_js_topnav.asp -->
+				<a href="index.html">LIFE</a>
+				<a class="active">WORK</a>
+				<a href="legacy.html">LEGACY</a>
+				<a href="quotes.html">QUOTES</a>
+				<a href="fun.html">FUN</a>
+				<a href="links.html">LINKS</a>
+			</div>
+		</div><!-- end of header div -->
+
+		<div class="mainpage">
+			<div class="title"><h1>His Work...</h1></div>
+			
+			<div class="timeline"><!-- timeline tutorial: https://www.w3schools.com/howto/howto_css_timeline.asp -->
+
+				<div class="container first"><!-- special class needed for first container to override negative margin -->
+				<!-- first is a left -->
+					<div class="content">
+						<h2>Instrumentum Artithmeticum</h2>
+							<p>Leibniz&#x27;s calculator was the first machine with which one could not only add and subtract &#x2D; but also multiply and divide numbers.</p>
+							<img src="timelinearithmeticum.jpg" alt="Insrumentrum Arithmeticum" style="width:100%">
+							<!-- image source: http://www.computerhistory.org/revolution/calculators/1/49/200 -->
+							<p>Leibniz faced engineering and production difficulties and despite over forty years of design work and in today&#x27;s dollars over a million spent, Leibniz machine failed to carry 10s correctly. </p>
+					</div>
+				</div>
+
+				<div class="container right"><!-- begin alternating containers right and left -->
+					<div class="content">
+						<h2>Stepped Reckoner</h2>
+							<p>His innovation known as the stepped reckoner or Leibniz wheel was a drum with varying length teeth.</p>
+								<div class="video-container">
+								<iframe width="480" height="270" width=100% src="https://www.youtube.com/embed/OacMkA38QiQ?rel=0&amp;showinfo=0&amp;start=8" 
+								frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								</div>
+					</div>
+				</div>
+
+				<div class="container left">
+					<div class="content">
+						<h2>...the next 300 years</h2>
+							<p>His wheel would continue to be used in mechanical calculators for three centuries from the Arithometer to the Curta Computer until the introduction of the electronic calculator in the mid&#x2D;1970s.</p>
+								<div class="video-container">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/YXBckQVLHLo?rel=0&amp;showinfo=0" 
+								frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								</div>
+					</div>
+				</div>
+
+				<div class="container right">
+					<div class="content">
+						<h2>Binary Calculations</h2>
+							<p>Leibniz interest in mechanical calculation led to his further development of binary calculation as an easier method of mechanical computing.</p>
+								<img src="timelinebinary.jpg" alt="Dyadica" style="width:100%">
+								<!-- image source: https://bibnum.hypotheses.org/154 -->
+							<p>In De progression Dyadica Leibniz describes a binary calculating machine:</p>
+							<p><em>This [binary] calculus could be implemented by a machine (without wheels)&#x85; provided with holes in such a way that they can be opened and closed. They are to be open at those places that correspond to a 1 and remain closed at those that correspond to a 0. Through the opened gates small cubes or marbles are to fall into tracks, through the others nothing. It [the gate array] is to be shifted from column to column as required&#x85;</em></p>
+								<img src="timelinemarbles.jpg" alt="Binary Marble Calculator" style="width:100%">
+								<!-- image source: https://makezine.com/projects/make-20/marble-adding-machine/ -->
+					</div>
+				</div>
+
+				<div class="container left">
+					<div class="content">
+						<h2>Logic and Language</h2>
+							<p>He also dedicated his life to the development of symbolic logic and creation of a &quot;universal language&quot;. Described as the most important mind in logic since Aristotle and until Boole, Leibniz sought to create an algebra of human thought:</p>
+							<p><em>Every misunderstanding should be nothing more than a miscalculation&#x85; easily corrected by the grammatical laws of that new language. Thus in the case of a controversial discussion, two philosophers could sit down at a table and just calculating, like two mathematicians, they could say, &#x27;Let us calculate&#x27;</em>.</p>
+								<img src="timelineletus.jpg" alt="salon" style="width:100%">
+								<!-- image source: https://pron.github.io/posts/computation-logic-algebra-pt1 -->
+					</div>
+				</div>
+
+				<div class="container right">
+					<div class="content">
+						<h2>Calculus</h2>
+							<p>
+								<img src="timelinecalculus.jpg" alt="calculus" style="width:100%"></p>
+								<!-- image source: http://blog.stephenwolfram.com/2013/05/dropping-in-on-gottfried-leibniz/ -->
+							<p>By 1690, Leibniz had distilled most of the ideas covered in modern calculus textbooks and we still use the notation style that Leibniz devised. Newton&#x27;s unwillingness to publish Leibniz&#x27;s more practical notation cost English mathematicians nearly a century of isolation.</p> 
+					</div>
+				</div><!-- end of last container -->
+
+			</div><!-- end of timeline -->
+		</div><!-- end of mainpage div -->
+
+		<div class="footer">
+			<img src="quoteunworthy.jpg" alt="What Would Leibniz Say?" style="width=100%" style="z-index: -1">
+			<!-- image source: http://ritter.bbaw.de/ adapted with word balloon photo editor from http://www.superlame.com/ -->
+		</div>
+
+	</body>
+</html>
