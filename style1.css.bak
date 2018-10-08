@@ -2,10 +2,6 @@
 CSS for Leibniz site
 */
 
-/* Google fonts do not display correctly on Chrome! 
-tutorial and code generator for self-hosting google fonts:
-https://mranftl.com/2014/12/23/self-hosting-google-web-fonts/ */
-
 /* miss-fajardose-regular - latin */
 @font-face {
   font-family: 'Miss Fajardose';
